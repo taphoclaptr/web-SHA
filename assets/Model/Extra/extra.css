@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+#header {
+    color:black;
+    height: 46px;
+    display: block;
+    background-color: #000;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#header .heading{
+    color:white;
+    text-decoration: none;
+    line-height: 46px;
+    padding-left:24px ;
+    padding-right: 24px;
+    font-size: 40px;
+}
+#slider {
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url('/assets/img/bg4.jpg') top center/ cover no-repeat;
+    position: relative;
+}
+#slider .content-text-slider{
+    color: #ffffff;
+    position: absolute;
+    bottom: 47px;
+    font-size: 32px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+#content{
+    height: 800px;
+}
+#content .content-heading{
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    height: auto;
+}
+#content .box-class{
+    height: 400px ;
+    width: 250px;
+    background-color: #888888;
+    float: left;   
+    margin: 100px 32px;
+    position: relative;
+    transform: translate(-50%);
+}
+#content .img{
+    height: 400px ;
+    width: 250px;
+}
+#content .name{
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+}
+#footer{
+    background-color: #000;
+    height: 300px;
+    backdrop-filter: 13px;
+}
+#footer{
+    color: #fff;
+    font-size: 80px;
+    padding: 64px 0px;
+}
+#header .heading a {
+  text-decoration: none;
+  color:#fff;
+  
+}
