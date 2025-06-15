@@ -1,78 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tài liệu ôn thi</title>
-    <link rel="stylesheet" href="/assets/Model/Extra/trang_chu.css">
-    <link rel="stylesheet" href="/assets/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="trang_chu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 <body>
     <div id="header">
-        <div class="background-header">
-            <label for="menuf" ><i class="menu ti-harddrive"></i></label>
-            <input type="checkbox" name="" id="menuf">
-            <div class="menusc">
-                    <ul class="monhoc">
-                        <li><a href="/index.html">Trang chủ</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html">Toán Học</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html">Ngữ Văn</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Vật Lí/vat_li.html">Vật Lí</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html">Hóa Học</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Sinh Học/sinh_hoc.html">Sinh Học</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Tin Học/tin_hoc.html">Tin Học</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html">Ngoại Ngữ</a></li>
-                        <li><a href="/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html">Lịch Sử</a></li>
-                    </ul>
-            </div>
-        </div>
-        <h2>Tài liệu ôn thi</h2>
+        <h2>Tài Liệu Ôn Thi</h2>
+        <!-- Phần tìm kiếm -->
         <form action="/tim-kiem" method="get">
             <input type="text" name="query" placeholder="Nhập từ khóa tìm kiếm...">
         </form>
-    </div>
-    
-    <div id="slider">
-        
-    </div>
 
-    <div id="content">  
-        <div class="main">
-            <div id="sgcontent">Đề Xuất <i class="dexuat ti-crown"></i>
-                <ul class="link">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
-            </div>
-            <div id="sgcontent">Gần Đây <i class="dexuat ti-timer"></i>
-                <ul class="link">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
-            </div>
-            <div id="sgcontent">Phổ biến <i class="dexuat ti-face-smile"></i>
-                <ul class="link">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
-            </div>
+        <!-- Nút ba gạch -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <!-- Danh sách menu -->
+        <div class="menu-list" id="menu">
+            <a href="/Môn học/Toán Học/toan_hoc.html">Toán Học</a>
+            <a href="/Môn học/Ngữ Văn/ngu_van.html">Ngữ Văn</a>
+            <a href="/Môn học/Vật Lí/vat_li.html">Vật Lí</a>
+            <a href="/Môn học/Hóa Học/hoa_hoc.html">Hóa Học</a>
+            <a href="/Môn học/Sinh Học/sinh_hoc.html">Sinh Học</a>
+            <a href="/Môn học/Tin Học/tin_hoc.html">Tin Học</a>
+            <a href="/Môn học/Ngoại ngữ/ngoai_ngu.html">Ngoại Ngữ</a>    
+            <a href="/Môn học/Lịch Sử/lich_su.html">Lịch Sử</a>
+            <a href="/assets/Model/Extra/Extra.html"><i class="fas fa-sign-out-alt"></i>Thoát tiện ích</a>
         </div>
     </div>
-    <div id="footer">Đây là bảng thử nghiệm nếu có gì sai sót xin góp ý tại đây ==>
-        <a href="../support.html">Góp ý</a>
+
+    <!-- Phần nội dung -->
+    <div class="main-wrapper">
+        <!-- Quảng cáo trái -->
+        <aside class="ad ad-left">
+        <h4>QC Trái</h4>
+        </aside>
+
+        <!-- Nội dung gallery -->
+        <main class="gallery-container">
+            <div id="recent-post">
+                <h2>🕓 Gần đây</h2>
+                <div class="gallery-grid" id="gallery-recent"></div>            
+            </div>
+
+            <div id="popular-post">
+                <h2>🔥 Phổ biến</h2>
+                <div class="gallery-grid" id="gallery-popular"></div>            
+            </div>
+
+        </main>
+
+        <!-- Quảng cáo phải -->
+        <aside class="ad ad-right">
+            <h4>QC Phải</h4>
+        </aside>
     </div>
+
+    <div id="footer">Đây là bảng thử nghiệm nếu có gì sai sót xin góp ý tại đây ==>
+        <a href="support.html">Góp ý</a>
+    </div>
+
+    <!-- Lệnh tìm kiếm -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const input = document.querySelector('input[name="query"]');
+
+            const subjects = {
+                "toán": "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
+                "toan": "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
+                "toan hoc": "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
+                "ngữ văn": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
+                "van": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
+                "văn": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
+                "ngu van": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
+                "vật lí": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
+                "vat li": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
+                "lí": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
+                "li": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
+                "hóa học": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
+                "hoa học": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
+                "hóa": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
+                "hoa": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
+                "sinh học": "/assets/Model/Extra/Môn học/Sinh Học/sinh_hoc.html",
+                "sinh": "/assets/Model/Extra/Môn học/Sinh Học/sinh_hoc.html",
+                "tin học": "/assets/Model/Extra/Môn học/Tin Học/tin_hoc.html",
+                "tin": "/assets/Model/Extra/Môn học/Tin Học/tin_hoc.html",
+                "ngoại ngữ": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
+                "tiếng anh": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
+                "anh": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
+                "ngoai ngu": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
+                "lịch sử": "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html",
+                "lich su": "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html",
+                "sử": "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html"
+            };
+
+            input.addEventListener("keydown", function (e) {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    const rawInput = input.value.trim();    
+                    const query = rawInput.toLowerCase();
+
+                    for (let keyword in subjects) {
+                        if (query.includes(keyword)) {
+                            window.location.href = subjects[keyword];
+                            return;
+                        }
+                    }
+
+                    alert("Không tìm thấy môn học phù hợp.");
+                }   
+            });
+        });
+    </script>
+
+    <!-- Nút ☰ -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "flex") {
+                menu.style.opacity = "0";
+                setTimeout(() => menu.style.display = "none", 300);
+            } else {
+                menu.style.display = "flex";
+                setTimeout(() => menu.style.opacity = "1", 10);
+            }
+        }
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("menu");
+            var icon = document.querySelector(".menu-icon");
+            if (!menu.contains(event.target) && !icon.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+
+    <!-- Load gallery từ file khác -->
+    <script>
+        const sources = [
+            "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
+            "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
+            "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
+            "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
+            "/assets/Model/Extra/Môn học/Sinh Học/sinh_hoc.html",
+            "/assets/Model/Extra/Môn học/Tin Học/tin_hoc.html",
+            "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
+            "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html"
+        ];
+
+        async function fetchGalleryCards() {
+            const allCards = [];
+
+            for (const src of sources) {
+                try {
+                    const res = await fetch(src);
+                    const htmlText = await res.text();
+                    const tempDoc = new DOMParser().parseFromString(htmlText, 'text/html');
+
+                    tempDoc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                        if (![...document.head.querySelectorAll('link')].some(l => l.href === link.href)) {
+                            const newLink = document.createElement('link');
+                            newLink.rel = 'stylesheet';
+                            newLink.href = link.href;
+                            document.head.appendChild(newLink);
+                        }
+                    });
+
+                    tempDoc.querySelectorAll('script').forEach(script => {
+                        const newScript = document.createElement('script');
+                        if (script.src) newScript.src = script.src;
+                        else newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                    });
+
+                    const cards = tempDoc.querySelectorAll(".gallery-card");
+                    cards.forEach(card => {
+                        const timeTag = card.querySelector("time");
+                        const date = timeTag ? new Date(timeTag.getAttribute("datetime")) : new Date(0);
+                        const views = parseInt(card.getAttribute("data-views") || "0");
+
+                        allCards.push({
+                            html: card.outerHTML,
+                            date: date,
+                            views: views
+                        });
+                    });
+
+                } catch (err) {
+                    console.error("Lỗi khi tải:", src, err);
+                }
+            }
+
+            // Sắp xếp theo gần đây
+            const recentCards = [...allCards].sort((a, b) => b.date - a.date);
+            const popularCards = [...allCards].sort((a, b) => b.views - a.views);
+
+            // Render
+            const renderTo = (list, containerId) => {
+                const root = document.getElementById(containerId);
+                root.innerHTML = "";
+                list.forEach((item, index) => {
+                    const temp = document.createElement("div");
+                    temp.innerHTML = item.html;
+                    const el = temp.firstChild;
+                    el.style.animationDelay = `${index * 0.1}s`;
+                    el.querySelectorAll("a").forEach(a => a.style.textDecoration = "none");
+                    root.appendChild(el);
+                });
+            };
+
+            renderTo(recentCards, "gallery-recent");
+            renderTo(popularCards, "gallery-popular");
+        }
+
+        fetchGalleryCards();
+
+        //Phần quản lí (Gần đây,Phô biến)
+        //Gần đây
+        const galleryCards = document.querySelectorAll('.gallery-card');
+        const recentSection = document.getElementById('recent-posts');
+
+        const today = new Date();
+        const todayStr = today.toISOString().split('T')[0];
+
+        const sevenDaysAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+        const sevenDaysAgoStr = sevenDaysAgo.toISOString().split('T')[0];
+
+        const recentPosts = [];
+
+        galleryCards.forEach(card => {
+            const timeTag = card.querySelector('time');
+            if (!timeTag) return;
+
+            const dateStr = timeTag.getAttribute('datetime'); // Lấy ngày từ HTML
+            if (!dateStr) return;
+
+            // So sánh chuỗi ngày dạng 'YYYY-MM-DD'
+            if (dateStr >= sevenDaysAgoStr && dateStr <= todayStr) {
+                recentPosts.push(card.cloneNode(true)); // Lưu bản sao
+            }
+        });
+
+        // Gắn vào khu vực hiển thị
+        if (recentPosts.length > 0) {
+            recentSection.innerHTML = '';
+            recentPosts.forEach(post => recentSection.appendChild(post));
+        } else {
+            recentSection.innerHTML = '</p>';
+        }
+        
+        // Phổ biến 
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".gallery-card");
+            const popularList = document.getElementById("popular-list");
+            const cardData = [];
+
+            cards.forEach(card => {
+                const id = card.dataset.id;
+                const viewCountElem = card.querySelector(".view-count");
+
+                // Lấy lượt xem từ localStorage, mặc định 0 nếu chưa có
+                const viewCount = parseInt(localStorage.getItem("views-" + id)) || 0;
+
+                // Cập nhật lại số view trong DOM nếu cần
+                viewCountElem.textContent = viewCount;
+
+                cardData.push({ card, viewCount });
+            });
+
+            // Sắp xếp giảm dần theo lượt xem
+            const sortedCards = cardData.sort((a, b) => b.viewCount - a.viewCount);
+
+            // Lấy top 20 bài
+            const top20 = sortedCards.slice(0, 20);
+
+            // Hiển thị top 20 vào khu vực phổ biến
+            top20.forEach(item => {
+                const clone = item.card.cloneNode(true);
+                popularList.appendChild(clone);
+            });
+        });
+
+    </script>
 </body>
 </html>
