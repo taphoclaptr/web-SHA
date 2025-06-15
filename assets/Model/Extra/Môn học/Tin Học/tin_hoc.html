@@ -4,51 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tin Học</title>
-    <link rel="stylesheet" href="/assets/Model/Extra/Môn học/Tin Học/tin_hoc.css">
+    <link rel="stylesheet" href="/Môn học/monhoc.css">
 </head>
 <body>
     <div id="header">
-        <ul id="nav">
-            <li>
-                <h2>Tin Học
-                    <i class="nav-arrow ti-angle-down"></i>
-                </h2>
-                <ul class="tin-hoc">
-                    <li>
-                        <a href="">Lớp 10</a>
-                        <ul class="lop-10">
-                            <li><a href="">Đề thi giữa kỳ I</a></li>
-                            <li><a href="">Đề thi cuối kỳ I</a></li>
-                            <li><a href="">Đề thi giữa kỳ II</a></li>
-                            <li><a href="">Đề thi cuối kỳ II</a></li>
-                        </ul>
-                    </li>
-                            
-                    <li>
-                        <a href="">Lớp 11</a>
-                        <ul class="lop-11">
-                            <li><a href="">Đề thi giữa kỳ I</a></li>
-                            <li><a href="">Đề thi cuối kỳ I</a></li>
-                            <li><a href="">Đề thi giữa kỳ II</a></li>
-                            <li><a href="">Đề thi cuối kỳ II</a></li>
-                        </ul>
-                    </li>                
-                    <li>
-                        <a href="">Lớp 12</a>
-                         <ul class="lop-12">
-                            <li><a href="">Đề thi giữa kỳ I</a></li>
-                            <li><a href="">Đề thi cuối kỳ I</a></li>
-                            <li><a href="">Đề thi giữa kỳ II</a></li>
-                            <li><a href="">Đề thi cuối kỳ II</a></li>
-                        </ul>
-                    </li>
-                 </ul>
-            </li>
-        </u>
-
+        <h2>Tin Học</h2>
         <form action="/tim-kiem" method="get">
             <input type="text" name="query" placeholder="Nhập từ khóa tìm kiếm...">
         </form>
+
+        <!-- Nút ba gạch -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+            <!-- Danh sách menu -->
+            <div class="menu-list" id="menu">
+                <a href="../../index.html">Trang chủ</a>
+                <a href="/Môn học/Toán Học/toan_hoc.html">Toán Học</a>
+                <a href="/Môn học/Ngữ Văn/ngu_van.html">Ngữ Văn</a>
+                <a href="/Môn học/Vật Lí/vat_li.html">Vật Lí</a>
+                <a href="/Môn học/Hóa Học/hoa_hoc.html">Hóa Học</a>
+                <a href="/Môn học/Sinh Học/sinh_hoc.html">Sinh Học</a>
+                <a href="/Môn học/Tin Học/tin_hoc.html">Tin Học</a>
+                <a href="/Môn học/Ngoại ngữ/ngoai_ngu.html">Ngoại Ngữ</a>    
+                <a href="/Môn học/Lịch Sử/lich_su.html">Lịch Sử</a>
+            </div>
+        </div>        
+        
     </div>
+
+    <!-- Phần nội dung -->
+    <div class="main-wrapper">
+        <!-- Quảng cáo trái -->
+        <aside class="ad ad-left">
+            <h4>QC Trái</h4>
+        </aside>
+
+        <!-- Nội dung chính của trang con -->
+        <main class="gallery-container">
+            <div class="gallery-grid" id="gallery-cards">
+                <div></div>  
+            </div>
+        </main>
+
+        <!-- Quảng cáo phải -->
+        <aside class="ad ad-right">
+            <h4>QC Phải</h4>
+        </aside>
+    </div>
+
+
+    <div id="footer">Đây là bảng thử nghiệm nếu có gì sai sót xin góp ý tại đây ==>
+        <a href="../../support.html">Góp ý</a>
+    </div>
+    <script src="/Môn học/monhoc.js"></script>
 </body>
 </html>
