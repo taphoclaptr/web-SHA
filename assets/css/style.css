@@ -58,7 +58,7 @@ body{
     display: none;
     position: absolute;
     background-color: #fff;
-    box-shadow: 0 0 10px rbga(0, 0, 0, 0.3 );
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3 );
 }
 #nav .modelgame a {
     color:#000;
