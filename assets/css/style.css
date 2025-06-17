@@ -75,6 +75,7 @@ body{
 
 #slider {
     position: relative;
+    
 }
 #slider .content-text-slider{
     color: #ffffff;
@@ -85,7 +86,6 @@ body{
     transform: translate(-50%);
     text-align: center;
 }
-
 
 #content {
     background-color:rgb(255, 255, 255);
