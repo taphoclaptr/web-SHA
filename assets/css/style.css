@@ -75,6 +75,11 @@ body{
 
 #slider {
     position: relative;
+    width: 100%;
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url('./assets/img/bg3.png') top center / cover no-repeat;
+    position: relative;
 }
 #slider .content-text-slider{
     color: #ffffff;
@@ -88,6 +93,7 @@ body{
 #slider img{
     font-size: 50px;
     width: 100%;}
+
 
 #content {
     background-color:rgb(255, 255, 255);
