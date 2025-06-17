@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ trợ</title>
+    <style>
+        .menu-list a:hover {
+            background-color: #ddd;
+        }
+        .comment-box {
+            width: 300px;
+            margin: 45px auto;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .stars {
+            display: flex;
+            gap: 5px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .stars .active {
+            color: gold;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }   
+        .review-list {
+            margin-top: 20px;
+        }
+        .review-item {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 5px solid #4CAF50;
+            border-radius: 5px;
+        }
+        .stars-display {
+            color: gold;
+            font-size: 20px;
+        }
+        .review-item.rating-1 {
+            border-left: 5px solid #c42727;
+        }
+        .review-item.rating-2 {
+            border-left: 5px solid #ff9900;
+        }
+        .review-item.rating-3 {
+            border-left: 5px solid #ffd900;
+        }
+        .review-item.rating-4 {
+            border-left: 5px solid #95ff75;
+        }
+        .review-item.rating-5 {
+            border-left: 5px solid #13aa06;
+        }
+    </style>
+</head>
+<body style="  margin: 0; padding: 0; box-sizing: border-box;">
+    <div id="header">
+        <div class="background-header" style="background-color: #12b4e6d0 ; width: 100% ; height: 50px; position: relative; box-shadow: 5px 5px 10px rgb(176, 237, 241); background-size: cover">
+            <form action="/tim-kiem" method="get">
+                <input type="text" name="query" placeholder="Nhập từ khóa tìm kiếm..." style="  padding: 10px; width: 28vw; border: 2px solid #6d6d6d; background-color: #f1f1f1; border-radius: 30px; position: absolute; right:3px; top: 8px;">
+            </form>
+        </div>
+        <div class="font" style="color: #ffff; top: 20px; position:absolute; top: 7.5px; left: 45px; font-family: Arial, sans-serif; font-size: 250%; " ><b>Hỗ trợ</b></div>
+        <div class="menu-icon" onclick="toggleMenu()" style="font-size: 32px;  cursor: pointer;  position:absolute;  top: 1px;  left: 4px;  z-index: 1000;  color: #ffff;">☰</div>
+        <div class="menu-list" style="display: none;  flex-direction: column;  background-color: #f0f0f0;  position: absolute;  top: 50px;  left: 10px;  width: 200px;  box-shadow: 4px 4px 8px rgba(0,0,0,0.1);  border-radius: 8px;  overflow: hidden;" id="menu">
+            <a href="../trang_chu.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc; border-top-left-radius: 4px; border-top-right-radius: 4px; ">Trang chủ</a>
+            <a href="../Môn học/Toán Học/toan_hoc.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc;">Toán Học</a>
+            <a href="../Môn học/Ngữ Văn/ngu_van.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc;">Ngữ Văn</a>
+            <a href="../Môn học/Vật Lí/vat_li.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc;">Vật Lí</a>
+            <a href="../Môn học/Hóa Học/hoa_hoc.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc;">Hóa Học</a>
+            <a href="../Môn học/Sinh Học/sinh_hoc.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc;">Sinh Học</a>
+            <a href="../Môn học/Tin Học/tin_hoc.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc;">Tin Học</a>
+            <a href="../Môn học/Ngoại ngữ/ngoai_ngu.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom: 1px solid #ccc;">Ngoại Ngữ</a>    
+            <a href="../Môn học/Lịch Sử/lich_su.html" style="padding: 12px;  text-decoration: none;  color: #333; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px">Lịch Sử</a>
+        </div>
+    </div>
+    <div class="comment-box">
+        <h3>Đánh giá của bạn:</h3>
+        <div class="stars" id="stars" style="width:157px;height: 40px; background: rgb(249, 249, 249);border-radius: 30px; border: 1px solid #ccc;padding: 4px ; margin-bottom: 10px;margin-left: 70px;">
+            <span data-star="1" style="margin-left: 2px">★</span>
+            <span data-star="2" style="margin-left: 2px">★</span>
+            <span data-star="3" style="margin-left: 2px">★</span>
+            <span data-star="4" style="margin-left: 2px">★</span>
+            <span data-star="5" style="margin-left: 2px">★</span>
+        </div>        
+        <input type="text" id="username" placeholder="Nhập tên của bạn..." style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #c7c6c6;border-width: 2px;box-shadow: -2px 2px 5px #ccc">
+
+        <textarea id="comment" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #c7c6c6;border-width: 2px;box-shadow: -2px 2px 5px #ccc"  placeholder="Đánh giá của bạn..." ></textarea>
+        <button onclick="submitComment()" style="background-color: rgb(95, 95, 233);" >Gửi</button>
+        <div class="review-list" id="reviewList"></div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+        }
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("menu");
+            var icon = document.querySelector(".menu-icon");
+            if (!menu.contains(event.target) && !icon.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        let currentRating = 0;
+        const stars = document.querySelectorAll('#stars span');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function () {
+                currentRating = parseInt(this.getAttribute('data-star'));
+                updateStars();
+            });
+        });
+
+        function updateStars() {
+            stars.forEach(star => {
+                const starValue = parseInt(star.getAttribute('data-star'));
+                star.classList.toggle('active', starValue <= currentRating);
+            });
+        }
+
+        window.onload = function () {
+            const savedReviews = localStorage.getItem('reviews');
+            if (savedReviews) {
+                document.getElementById('reviewList').innerHTML = savedReviews;
+            }
+        };
+
+        function submitComment() {
+            const comment = document.getElementById('comment').value.trim();
+            const username = document.getElementById('username').value.trim();
+            const reviewList = document.getElementById('reviewList');
+
+            if (currentRating === 0 || comment === '' || username === '') {
+                alert('Anh cần nhập tên, bình luận và chọn số sao!');
+                return;
+            }
+
+            const now = new Date();
+            const timeString = now.toLocaleString('vi-VN');
+
+            const reviewItem = document.createElement('div');
+            reviewItem.className = `review-item rating-${currentRating}`;
+            reviewItem.innerHTML = `
+                <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" width="30" height="30" style="border-radius: 50%; margin-right: 10px;">
+                    <strong>${username}</strong> - <span style="margin-left: 8px; font-size: 12px; color: gray;">${timeString}</span>
+                </div>
+                <div class="stars-display">${'★'.repeat(currentRating)}${'☆'.repeat(5 - currentRating)}</div>
+                <div>${comment}</div>
+            `;
+
+            reviewList.prepend(reviewItem);
+            localStorage.setItem('reviews', reviewList.innerHTML);
+            document.getElementById('comment').value = '';
+            document.getElementById('username').value = '';
+            currentRating = 0;
+            updateStars();
+        }
+    </script>
+</body>
+</html>

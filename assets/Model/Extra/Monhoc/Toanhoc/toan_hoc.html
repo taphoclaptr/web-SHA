@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toán Học</title>
+    <link rel="stylesheet" href="../monhoc.css">
+</head>
+<body>
+    <div id="header">
+        <h2>Toán Học</h2>
+        <form action="/tim-kiem" method="get">
+            <input type="text" name="query" placeholder="Nhập từ khóa tìm kiếm...">
+        </form>
+
+        <!-- Nút ba gạch -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+            <!-- Danh sách menu -->
+            <div class="menu-list" id="menu">
+                <a href="./trang_chu.html">Trang chủ</a>
+                <a href="/assets/Model/Extra/Monhoc/Toanhoc/toan_hoc.html">Toán Học</a>
+                <a href="/assets/Model/Extra/Monhoc/Nguvan/ngu_van.html">Ngữ Văn</a>
+                <a href="/assets/Model/Extra/Monhoc/Vatly/vat_li.html">Vật Lí</a>
+                <a href="/assets/Model/Extra/Monhoc/Hoahoc/hoa_hoc.html">Hóa Học</a>
+                <a href="/assets/Model/Extra/Monhoc/Sinhhoc/sinh_hoc.html">Sinh Học</a>
+                <a href="/assets/Model/Extra/Monhoc/Tinhoc/tin_hoc.html">Tin Học</a>
+                <a href="/assets/Model/Extra/Monhoc/Ngoaingu/ngoai_ngu.html">Ngoại Ngữ</a>    
+                <a href="/assets/Model/Extra/Monhoc/Lichsu/lich_su.html">Lịch Sử</a>
+                <a href="/assets/Model/Extra/Môn học/Extra.html"><i class="fas fa-sign-out-alt"></i>Thoát tiện ích</a>
+            </div>
+        </div>        
+        
+    </div>
+
+    <!-- Phần nội dung -->
+    <div class="main-wrapper">
+        <!-- Quảng cáo trái -->
+        <aside class="ad ad-left">
+            <h4>QC Trái</h4>
+        </aside>
+
+        <!-- Nội dung chính của trang con -->
+        <main class="gallery-container">
+            <div class="gallery-grid" id="gallery-cards">
+                <div class="gallery-card">
+                    <time datetime="2025-06-06"></time>
+                    <a href="/Môn học/Xuất đề thi/Toán ( đề 1).pdf">
+                        <img src="/Môn học/Xuất đề thi/Toán ( ảnh 1).png" alt="Đề thi thử TN THPT 2025 môn Toán lần 2 sở GD&ĐT Bà Rịa - Vũng Tàu">
+                        <div class="gallery-info">
+                            <h3>Đề thi thử TN THPT 2025 môn Toán lần 2 sở GD&ĐT Bà Rịa - Vũng Tàu</h3>
+                            <div class="time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 1 .5.5v4.25l3 1.8a.5.5 0 0 1-.5.866l-3.5-2.1A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z"/></svg>
+                                <span>28/05/2025</span>                                
+                            </div>
+
+                        </div>   
+                    </a>
+                    <div class="popularity-section">
+                        <div class="view">
+                            <button class="btn-view" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" troke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                            <span class="view-count" >0</span>
+                        </div>
+                
+                        <div class="like">
+                            <button class="btn-like">🤍</button>
+                            <span class="like-count">0</span>        
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="gallery-card">
+                    <time datetime="2025-05-28"></time>                    
+                    <a href="/Môn học/Xuất đề thi/Toán ( đề 2).pdf">
+                        <img src="/Môn học/Xuất đề thi/Toán ( ảnh 2).png" alt="Đề thi thử tốt nghiệp THPT 2025 môn Toán trường THPT Lê Quý Đôn - TP HCM">
+                        <div class="gallery-info">
+                            <h3>Đề thi thử tốt nghiệp THPT 2025 môn Toán trường THPT Lê Quý Đôn - TP HCM</h3>
+                            <div class="time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 1 .5.5v4.25l3 1.8a.5.5 0 0 1-.5.866l-3.5-2.1A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z"/></svg>
+                                <span>28/05/2025</span>                                
+                            </div>
+                        </div>   
+                    </a>
+                    <div class="popularity-section">
+                        <div class="view">
+                            <button class="btn-view" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" troke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                            <span class="view-count" >0</span>
+                        </div>
+                
+                        <div class="like">
+                            <button class="btn-like">🤍</button>
+                            <span class="like-count">0</span>        
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="gallery-card">
+                    <time datetime="2025-05-28"></time>
+                    <a href="/Môn học/Xuất đề thi/Toán ( đề 3).pdf">
+                        <img src="/Môn học/Xuất đề thi/Toán ( ảnh 3).png" alt="Đề thi thử TN THPT năm 2025 môn Toán trường THPT chuyên Phan Bội Châu - Nghệ An">
+                        <div class="gallery-info">
+                            <h3>Đề thi thử TN THPT năm 2025 môn Toán trường THPT chuyên Phan Bội Châu - Nghệ An</h3>
+                            <div class="time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 1 .5.5v4.25l3 1.8a.5.5 0 0 1-.5.866l-3.5-2.1A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z"/></svg>
+                                <span>28/05/2025</span>                                
+                            </div>
+                        </div>   
+                    </a>
+                    <div class="popularity-section">
+                        <div class="view">
+                            <button class="btn-view" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" troke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                            <span class="view-count" >0</span>
+                        </div>
+                
+                        <div class="like">
+                            <button class="btn-like">🤍</button>
+                            <span class="like-count">0</span>        
+                        </div>
+                    </div>   
+                </div>
+                
+                <div class="gallery-card">
+                    <time datetime="2025-06-06"></time>
+                    <a href="/Môn học/Xuất đề thi/Toán ( đề 4).pdf">
+                        <img src="/Môn học/Xuất đề thi/Toán ( ảnh 4).png" alt="Đề thi thử tốt nghiệp THPT năm 2025 môn Toán sở GD&ĐT Kiên Giang">
+                        <div class="gallery-info">
+                            <h3>Đề thi thử tốt nghiệp THPT năm 2025 môn Toán sở GD&ĐT Kiên Giang</h3>
+                            <div class="time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 1 .5.5v4.25l3 1.8a.5.5 0 0 1-.5.866l-3.5-2.1A.5.5 0 0 1 7.5 8V4a.5.5 0 0 1 .5-.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z"/></svg>
+                                <span>28/05/2025</span>                                
+                            </div>
+                        </div>   
+                    </a>
+                    <div class="popularity-section">
+                        <div class="view">
+                            <button class="btn-view" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" troke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                            <span class="view-count" >0</span>
+                        </div>
+                
+                        <div class="like">
+                            <button class="btn-like">🤍</button>
+                            <span class="like-count">0</span>        
+                        </div>
+                    </div>   
+                </div>            
+                
+            </div>
+        </main>
+
+        <!-- Quảng cáo phải -->
+        <aside class="ad ad-right">
+            <h4>QC Phải</h4>
+        </aside>
+    </div>
+
+
+    <div id="footer">Đây là bảng thử nghiệm nếu có gì sai sót xin góp ý tại đây ==>
+        <a href="../support.html">Góp ý</a>
+    </div>
+    <script src="../monhoc.js"></script>
+</body>
+</html>
