@@ -21,16 +21,16 @@
 
         <!-- Danh sách menu -->
         <div class="menu-list" id="menu">
-            <a href="./trang_chu.html">Trang chủ</a>
-            <a href="./Toanhoc/toan_hoc.html">Toán Học</a>
-            <a href="./Nguvan/ngu_van.html">Ngữ Văn</a>
-            <a href="./Vatly/vat_li.html">Vật Lí</a>
-            <a href="./Hoahoc/hoa_hoc.html">Hóa Học</a>
-            <a href="./Sinhhoc/sinh_hoc.html">Sinh Học</a>
-            <a href="./Tinhoc/tin_hoc.html">Tin Học</a>
-            <a href="./Ngoaingu/ngoai_ngu.html">Ngoại Ngữ</a>    
-            <a href="./Lichsu/lich_su.html">Lịch Sử</a>
-            <a href="./Extra.html"><i class="fas fa-sign-out-alt"></i>Thoát tiện ích</a>
+            <a href="../Extra/trang_chu.html">Trang chủ</a>
+            <a href="./Monhoc/Toanhoc/toan_hoc.html">Toán Học</a>
+            <a href="./Monhoc/Nguvan/ngu_van.html">Ngữ Văn</a>
+            <a href="./Monhoc/Vatly/vat_li.html">Vật Lí</a>
+            <a href="./Monhoc/Hoahoc/hoa_hoc.html">Hóa Học</a>
+            <a href="./Monhoc/Sinhhoc/sinh_hoc.html">Sinh Học</a>
+            <a href="./Monhoc/Tinhoc/tin_hoc.html">Tin Học</a>
+            <a href="./Monhoc/Ngoaingu/ngoai_ngu.html">Ngoại Ngữ</a>    
+            <a href="./Monhoc/Lichsu/lich_su.html">Lịch Sử</a>
+            <a href="../Extra/"><i class="fas fa-sign-out-alt"></i>Thoát tiện ích</a>
         </div>
     </div>
 
@@ -71,32 +71,32 @@
             const input = document.querySelector('input[name="query"]');
 
             const subjects = {
-                "toán": "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
-                "toan": "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
-                "toan hoc": "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
-                "ngữ văn": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
-                "van": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
-                "văn": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
-                "ngu van": "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
-                "vật lí": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
-                "vat li": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
-                "lí": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
-                "li": "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
-                "hóa học": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
-                "hoa học": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
-                "hóa": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
-                "hoa": "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
-                "sinh học": "/assets/Model/Extra/Môn học/Sinh Học/sinh_hoc.html",
-                "sinh": "/assets/Model/Extra/Môn học/Sinh Học/sinh_hoc.html",
-                "tin học": "/assets/Model/Extra/Môn học/Tin Học/tin_hoc.html",
-                "tin": "/assets/Model/Extra/Môn học/Tin Học/tin_hoc.html",
-                "ngoại ngữ": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
-                "tiếng anh": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
-                "anh": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
-                "ngoai ngu": "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
-                "lịch sử": "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html",
-                "lich su": "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html",
-                "sử": "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html"
+                "toán": "./Monhoc/Toanhoc/toan_hoc.html",
+                "toan": "./Monhoc/Toanhoc/toan_hoc.html",
+                "toan hoc": "./Monhoc/Toanhoc/toan_hoc.html",
+                "ngữ văn": "./Monhoc/Nguvan/ngu_van.html",
+                "van": "./Monhoc/Nguvan/ngu_van.html",
+                "văn": "./Monhoc/Nguvan/ngu_van.html",
+                "ngu van": "./Monhoc/Nguvan/ngu_van.html",
+                "vật lí": "./Monhoc/Vatly/vat_li.html",
+                "vat li": "./Monhoc/Vatly/vat_li.html",
+                "lí": "./Monhoc/Vatly/vat_li.html",
+                "li": "./Monhoc/Vatly/vat_li.html",
+                "hóa học": "./Monhoc/Hoahoc/hoa_hoc.html",
+                "hoa học": "./Monhoc/Hoahoc/hoa_hoc.html",
+                "hóa": "./Monhoc/Hoahoc/hoa_hoc.html",
+                "hoa": "./Monhoc/Hoahoc/hoa_hoc.html",
+                "sinh học": "./Monhoc/Sinhhoc/sinh_hoc.html",
+                "sinh": "./Monhoc/Sinhhoc/sinh_hoc.html",
+                "tin học": "./Monhoc/Tinhoc/tin_hoc.html",
+                "tin": "./Monhoc/Tinhoc/tin_hoc.html",
+                "ngoại ngữ": "./Monhoc/Ngoaingu/ngoai_ngu.html",
+                "tiếng anh": "./Monhoc/Ngoaingu/ngoai_ngu.html",
+                "anh": "./Monhoc/Ngoaingu/ngoai_ngu.html",
+                "ngoai ngu": "./Monhoc/Ngoaingu/ngoai_ngu.html",
+                "lịch sử": "./Monhoc/Lichsu/lich_su.html",
+                "lich su": "./Monhoc/Lichsu/lich_su.html",
+                "sử": "./Monhoc/Lichsu/lich_su.html"
             };
 
             input.addEventListener("keydown", function (e) {
@@ -142,14 +142,14 @@
     <!-- Load gallery từ file khác -->
     <script>
         const sources = [
-            "/assets/Model/Extra/Môn học/Toán Học/toan_hoc.html",
-            "/assets/Model/Extra/Môn học/Ngữ Văn/ngu_van.html",
-            "/assets/Model/Extra/Môn học/Vật Lí/vat_li.html",
-            "/assets/Model/Extra/Môn học/Hóa Học/hoa_hoc.html",
-            "/assets/Model/Extra/Môn học/Sinh Học/sinh_hoc.html",
-            "/assets/Model/Extra/Môn học/Tin Học/tin_hoc.html",
-            "/assets/Model/Extra/Môn học/Ngoại ngữ/ngoai_ngu.html",
-            "/assets/Model/Extra/Môn học/Lịch Sử/lich_su.html"
+            "./Monhoc/Toanhoc/toan_hoc.html",
+            "./Monhoc/Nguvan/ngu_van.html",
+            "./Monhoc/Vatly/vat_li.html",
+            "./Monhoc/Hoahoc/hoa_hoc.html",
+            "./Monhoc/Sinhhoc/sinh_hoc.html",
+            "./Monhoc/Tinhoc/tin_hoc.html",
+            "./Monhoc/Ngoaingu/ngoai_ngu.html",
+            "./Monhoc/Lichsu/lich_su.html"
         ];
 
         async function fetchGalleryCards() {
